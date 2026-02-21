@@ -556,30 +556,7 @@ nav{
 
 <!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-
-    
-    e.preventDefault();
-    const name = document.getElementById('prayerName').value;
-    const email = document.getElementById('prayerEmail').value;
-    const request = document.getElementById('prayerRequest').value;
-    emailjs.send('service_n2c0sax', '_ejs-test-mail-service_', {
-        from_name: name,
-        from_email: email,
-        message: request
-    })
-    .then(function(response){
-        alert("Your prayer request has been sent. God bless!");
-        document.getElementById('prayerForm').reset();
-        var modalEl = document.getElementById('prayerModal');
-        var modal = bootstrap.Modal.getInstance(modalEl);
-        modal.hide();
-    }, function(error){
-        alert("Oops! Something went wrong. Please try again later.");
-        console.log(error);
-    });
-});
-</script>
+<script>
 
 <!-- DONATION SECTION -->
 <section id="donate" style="background:#fff3cd;">
